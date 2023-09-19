@@ -1,0 +1,26 @@
+What is union?
+---------------------------------------
+
+    * Union is a user defined data type (very similer to structure)
+    * The difference between structure and unions lies in the fact that in structure,each member has its own strorage location,whereas members of a union uses a single shared memory location .
+    *This single shared memory location is equal to size of its largest data member.
+
+Declearing and Accessing union members:
+---------------------------------------
+
+    *Like structure ,we access any member by using the member access operator (.) in unions.
+    *We use keyword union to define a union .
+    *Syntax is very similer to that of structure 
+
+            union structure{
+                int roll ;
+                char name[40];
+                float marks; 
+            }u1;
+            u1.roil =1;
+            strcpy(u1.name,"Parag jyoti phukan");
+            u1.marks =75.5;
+
+
+
+We can use unions to introduce better memory management in our C program

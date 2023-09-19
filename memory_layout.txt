@@ -1,0 +1,51 @@
+
+                    DYNAMIC MEMMORY ALLOCATION
+                    ---------------------------
+
+
+1.What & Why dynamic memory allocation?
+ *An staticlly allocated variable or array has a fixed size in memory.
+ *We have learnt to create big enough arrays to fit in our inputs but this doesn't seem like an option al way to allocate memory.
+ *Memory is a very useful resource.
+ *Clearly we need a way to request memory on runtime.
+ *DYNAMIC MEMMORY ALLOCATION  is a way in which the size of a data structure can be  changed during the runtime.
+
+
+ Static memory allocation
+
+        * allocation is done before the program's execution.
+        * There is no memory reusability and the memory allocated cannot be freed .
+        * Less efficient.
+
+Dynamic memory allocation
+
+        * Allocation is done during the program's execution.
+        * There is memory reusability and the allocated memory can be freed when not required.
+        * More efficient.
+
+
+MEMMORY ALLOCATION IN C PROGRAMS
+   i) Memory assigned to a program in a typical architecture can be broken down four segments:
+        1.Code or text
+        2.Static/Global variables
+            *data segment(initialized segment)
+            *bss(block started by symbol) segment(uninitialized segment)
+        3.Stack
+        4.Heap
+
+{LIFO=Last In Fast Out(Stack) }
+
+C PROGRAM:STACK OVERFLOW
+    *Compiler allocate some space for the stack part of the memory
+    *When this space gets exhausted for some bad reason ,the situation is called as stack overflow .
+    *Typical example includes recursion with wrong/no base condition.
+
+C PROGRAM:USE OF HEAP 
+    *There  are a lot of limitations of stack(static memory allocation)
+    * Some of the example include variable sized array.freeing memory no longer required etc.
+    * Heap can be used flexibly by the programmer as per his needs.
+
+C PROGRAM:USE TO HEAP
+    *We can create a pointer in our main function and point to a memory block in the Heap
+    * The address is stored by the local variable in the main function .
+    * The memory consumed will not get freed automatically in case we overwrite pointer 

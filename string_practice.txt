@@ -1,0 +1,30 @@
+C LIBRARY : <string.h>
+
+i) strcat()----> This function use to concatenate or combine two string
+
+example :
+        strcat("Hello","World");
+
+ii)strlen()---->This function use to show length of the string
+
+example:
+        strlen(str);
+
+iii)strrev()---->This function use to show reverse of a string
+
+example:
+        strrev(str);
+
+iv)strcpy()---->This function use to copy  one string into another string
+
+example:
+        strcpy(s2,s1);
+
+
+v)strcmp()---->This functioin use to compare two given string
+
+ example:
+            strcmp(s1,s2);
+
+
+All example in string_practice3.c

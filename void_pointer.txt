@@ -1,0 +1,24 @@
+WHAT IS VOID POINTER:
+
+    *  A void pointer is a pointer that has no data type associated with it.
+    *  A void  pointer can be easily typecasted to any pointer type
+    *  In simple languge it is a general purpose pointer variable.
+
+    example:
+
+        int x=10;
+        char s='w';
+        char y='p';
+        void *p=&x; // void pointer stores address of int 'x'
+        p=&y; //void pointer now holds address of char 's'
+        void *q=&y; // void pointer stores address of char  'y'
+
+
+  USE OF VOID POINTERS
+
+    * In dynamic memory allocation, malloc() and calloc() return (void*) type pointer
+    * This allows thse dynamic memory function to be used to allocate memory od any data typw .This is because these pointers can be typecasted to any ponter type .
+
+-> It is not possible  to dereference void pointer.
+-> Pointer arithmetic is not allowd in C standards with void ponters .
+-> Hence it is not recommended to use pointer arithmetic with void pointers.

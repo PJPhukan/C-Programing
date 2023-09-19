@@ -1,0 +1,57 @@
+DANGLING POINTER IN C : 
+
+    * A pointer pointing to a freed memory location or the location whose content has been deleted is called a DANGLING POINTER.
+    * DANGLING pointers arise during object destruction when an object that has an incoming reference is deleted or deallocated , without modifying the value of the pointer, so that the pointer still points to the memory location of the deallocated memory.
+
+CAUSES OF DANGLING POINTER:
+
+    * Deallocation of memory,
+        -> When memory is deallocated,the pointer keeps pointing to the freed space.
+            Example:
+                char *str=" Hi i am Parag ";
+                int a ;
+                int *ptr= (int* ) malloc (n*sizeof(int));
+                free(ptr);  //ptr is now become a dangling pointer
+                ptr=NULL;   // ptr no longer dangling
+
+
+    * Returning local variable in function calls,
+        -> Example:
+                #include<stdio.h>
+                int *myfunc(){
+                    //a is local variable and goes out of scope on function return over.
+                    int a =89;
+                    return &a;
+                }
+
+                int main(){
+                    int *ptr=myfunc();
+                    printf("%d",*ptr);
+                    return 0;
+                }
+
+
+    * Variable going out of scope
+        -> Example:
+                #include<stdio.h>
+                int main(){
+                    int *ptr;
+                    {
+                        int i=90;
+                        ptr=&i;   // ptr points to invalid location
+                    }
+                    //ptr is now a dangling pointer  
+                    printf("%d",*ptr);
+                    return 0;
+                }
+
+
+IS DANGLING POINTER A GOOD THING TO HAVE:
+    * Dangling pointers can introduce nasty bugs in our C programs.
+    * Dangling pointer bugs frequently become security holes at times.
+    * We can avoid issues caused by dangling pointers by initializing pointer to NULL.
+    * Assigning NULL value means pointer is a null pointer now.
+
+
+
+                                    

@@ -1,0 +1,109 @@
+1.What is a structure in c :
+-----------------------------------------
+
+    * Structure are user defined data type in C.
+    * Using structure allows us to combine data of types together.
+    * It is used to create a complex data type which contains diverse information
+    * They are very similer to arrays but structure can store data of any type .whichis practically more usefull.
+
+
+2.Example storing employee information :
+-----------------------------------------
+
+    * Structure are user defined data type 
+    * Suppose we want to store information of 10000 employees working at ABC Pvt.Ltd
+
+        *Name
+        *Address
+        *Email
+        *Employee
+
+    * Clearly we need some user defind data type which contains only this information
+
+3.Defining a Structure :
+-----------------------------------------
+    struct[structure_name]{
+        //data type var 1
+        //data type var 2
+        //data type var 3
+    }
+    [structure_variables];
+
+
+    4.Declearing a structure :
+-----------------------------------------
+        We can either declare a structure along with structure definition or separatly. 
+
+        1st type:
+
+            #include<stdio.h>
+            struct Employee{
+                int id;
+                char name[20];
+                float marks;
+            };
+            struct Employee e1,e2,e3;
+            int main(){
+                struct Employee tt;
+                return 0;
+            }
+        
+        2nd type:
+
+            #include<stdio.h>
+            struct Employee{
+                int id;
+                char name[20];
+                float marks;
+            }e1,e2,e3;
+            int main(){
+                struct Employee tt;
+                return 0;
+            }
+
+
+5.Initializing a structure: :
+-----------------------------------------
+    We can Initialize a structure either along with structure defination or separatly .
+
+        
+       1st type :
+        
+        #include<stdio.h>
+            struct Employee{
+                int id;
+                char name[20];
+                float marks;
+            };
+            
+            int main(){
+                struct Employee tt;
+                tt.id=12;
+                tt.marks=3.14;
+                tt.name='p';
+                return 0;
+            }
+
+        2nd type: 
+
+            #include<stdio.h>
+            struct Employee{
+                int id;
+                char name[20];
+                float marks;
+            };
+          
+            int main(){
+                struct Employee tt={12,p,3.14};
+                return 0;
+            }
+
+
+    6.Accenssing structure member :
+    ---------------------------------
+
+        * array element are sccessed using the subscript variable.
+        * In a similer fashion ,structure members are sccessed using [.] operator.
+        * (.) is called as "structure member operator".
+        * To access the member of the structure ,we use this operator in between "Structure name"&"Member name".
+     
